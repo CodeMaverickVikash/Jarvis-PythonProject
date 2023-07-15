@@ -90,8 +90,8 @@ def wishMe():
 
 # task - send a pdf/text file through email using python 
 def sendEmail(receiver_mail, msg):
-    sender_mail = "purposetesting92@gmail.com"
-    sender_pass = "Yetestinghai@123"
+    sender_mail = "example@gmail.com"
+    sender_pass = "example_password"
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
@@ -147,9 +147,8 @@ def facebook():
         browser = webdriver.Chrome()
         browser.get('https://www.facebook.com/')
 
-        username = "purposetesting92@gmail.com"
-        # password = "Yefbkapasshai@123"
-        password = "Fbkapass@123"
+        username = "example@gmail.com"
+        password = "example_password"
 
         enter_username = WebDriverWait(browser, 20).until(
             expected_conditions.presence_of_element_located((By.NAME, 'email')))
@@ -364,7 +363,7 @@ class MainThread(QThread):
                 try:
                     speek("What should I say?")
                     content = takeCommand("Email").lower()
-                    to = "vikashmaskhare@gmail.com"
+                    to = "example@gmail.com"
                     sendEmail(to, content)
                     speek("Email has been sent!")
                 except Exception as e:
